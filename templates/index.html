@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Name Surname's Blog</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Name Surname</a></h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+      <nav>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="https://twitter.com/x" target="_blank">Twitter</a></li>
+          <li>
+            <a href="https://github.com/github" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2>Latest Posts</h2>
+      <hr />
+      {{range .}}
+      <article>
+        <h2><a href="/posts/{{.Filename}}">{{.Title}}</a></h2>
+        <p class="date">{{.Date}}</p>
+        <p>{{.Excerpt}}</p>
+      </article>
+      {{else}}
+      <p>No posts found.</p>
+      {{end}}
+    </main>
+    <footer>
+      <!-- <p>&copy; 2023 Name Surname</p> -->
+      <div class="subscribe">
+        <p>Get notified...</p>
+        <p>When I release a new product or publish something important.</p>
+        <form id="subscribe-form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("subscribe-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var email = document.getElementById("email").value;
+
+          fetch("/subscribe", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: email }),
+          })
+            .then((response) => response.text())
+            .then((data) => console.log(data))
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        });
+    </script>
+  </body>
+</html>

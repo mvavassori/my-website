@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Name Surname</a></h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+      <nav>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="https://twitter.com/x" target="_blank">Twitter</a></li>
+          <li>
+            <a href="https://github.com/github" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="post">{{.Content}}</div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Name Surname</p>
+    </footer>
+  </body>
+</html>

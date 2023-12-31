@@ -1,0 +1,249 @@
+/* Base styles */
+html body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article {
+  margin: 4px;
+  padding: 4px 16px;
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+}
+
+.container {
+  width: 70%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.post {
+  width: 65%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex: 1;
+  font-size: large;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header h1 {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Navigation Styles */
+header nav ul {
+  list-style: none;
+  display: flex; /* Keep the menu visible on desktop */
+  margin-right: 20px;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+/* Hover effect */
+header nav ul li a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Style the label as a hamburger icon */
+.hamburger-icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+}
+
+/* Article styling */
+main article h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Hover effect */
+main article h2 a:hover {
+  text-decoration: underline;
+}
+
+.date {
+  color: rgb(104, 104, 104);
+  font-size: 12px;
+}
+
+/* About */
+.about {
+  font-size: large;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+/* footer p {
+  margin-left: 20px;
+} */
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh; /* adjust this to your needs */
+  text-align: center;
+}
+
+.subscribe p:first-child {
+  font-size: 1.5em; /* adjust this to your needs */
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.subscribe p:last-child {
+  margin-top: 0;
+}
+
+.subscribe form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subscribe form input {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.subscribe form button {
+  padding: 10px 20px;
+  background-color: #008702;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscribe form button:hover {
+  background-color: #007402;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  header {
+    position: relative; /* Needed for absolute positioning of the hamburger icon */
+  }
+
+  .container {
+    width: 97%;
+  }
+
+  .post {
+    width: 97%;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+  header h1 {
+    margin-left: 10px;
+  }
+  .hamburger-icon {
+    display: block;
+    margin-right: 10px;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off screen */
+    height: 100%;
+    width: 60%; /* Width of the sidebar */
+    background-color: #333;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1;
+  }
+
+  header nav ul {
+    display: block; /* Always show the menu in the sidebar */
+    padding-top: 60px; /* Give some space for the hamburger icon */
+  }
+
+  header nav ul li {
+    text-align: right;
+    padding: 20px 0px 0px 0px;
+  }
+
+  /* When the checkbox is checked, slide in the menu */
+  #menu-toggle:checked + .hamburger-icon + nav {
+    right: 0; /* Bring the sidebar on screen */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(24, 26, 27);
+    color: rgb(232, 230, 227);
+  }
+  article {
+    background-color: rgb(32, 35, 37);
+    /* color: rgb(232, 230, 227); */
+  }
+  main article h2 a {
+    text-decoration: none;
+    color: rgb(232, 230, 227);
+  }
+  .date {
+    color: rgb(166, 159, 147);
+  }
+}
