@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"html/template"
@@ -156,9 +158,17 @@ func subscribeHandler(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Printf("Email submitted: %s\n", requestData.Email)
 	// You can respond to the client if needed
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Subscription successful"))
+	// w.WriteHeader(http.StatusOK)
 
+	err := subscribeEmailToMailchimp(requestData.Email)
+	if err != nil {
+		// Handle error, possibly sending a different HTTP status or message to the client
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// After processing the subscription
+	fmt.Fprintf(w, "Subscription successful for email: %s", requestData.Email)
 }
 
 func extractFrontMatter(markdownContent string) (map[string]string, string) {
@@ -212,7 +222,7 @@ func mdToHTML(md []byte) []byte {
 	return markdown.Render(doc, renderer)
 }
 
-func subscribeEmailToMailchimp(email string) {
+func subscribeEmailToMailchimp(email string) error {
 
 	mailchimpDataCenter := os.Getenv("MAILCHIMP_DATA_CENTER")
 	mailchimpApiKey := os.Getenv("MAILCHIMP_API_KEY")
@@ -220,10 +230,48 @@ func subscribeEmailToMailchimp(email string) {
 
 	if mailchimpDataCenter == "" || mailchimpApiKey == "" || mailchimpListId == "" {
 		fmt.Println("Mailchimp environment variables are not set")
-		// Handle the error appropriately
-		return
+		return fmt.Errorf("mailchimp environment variables are not set")
 	}
-	// todo continue
+
+	apiUrl := fmt.Sprintf("https://%s.api.mailchimp.com/3.0/lists/%s/members", mailchimpDataCenter, mailchimpListId)
+
+	payload := map[string]interface{}{
+		"email_address": email,
+		"status":        "subscribed", // Or "pending" if you want double opt-in
+	}
+
+	jsonPayload, err := json.Marshal(payload)
+	if err != nil {
+		return err
+	}
+
+	req, err := http.NewRequest("POST", apiUrl, bytes.NewBuffer(jsonPayload))
+	if err != nil {
+		return err
+	}
+
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "Basic "+basicAuth("", mailchimpApiKey))
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode >= 400 {
+		// Handle error responses from Mailchimp
+		return fmt.Errorf("mailchimp responded with status code: %d", resp.StatusCode)
+	}
+
+	return nil
+}
+
+// Helper function for HTTP Basic Auth
+func basicAuth(username, password string) string {
+	auth := username + ":" + password
+	return base64.StdEncoding.EncodeToString([]byte(auth))
 }
 
 func main() {
