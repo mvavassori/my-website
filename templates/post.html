@@ -24,7 +24,21 @@
       <div class="post">{{.Content}}</div>
     </main>
     <footer>
-      <p>&copy; 2023 Name Surname</p>
+      <div class="subscribe">
+        <p>Get notified...</p>
+        <p>When I release a new product or publish something important.</p>
+        <form id="subscribe-form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
     </footer>
+    <script src="../static/scripts/subscribe.js"></script>
   </body>
 </html>
