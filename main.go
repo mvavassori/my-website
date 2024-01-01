@@ -157,8 +157,6 @@ func subscribeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fmt.Printf("Email submitted: %s\n", requestData.Email)
-	// You can respond to the client if needed
-	// w.WriteHeader(http.StatusOK)
 
 	err := subscribeEmailToMailchimp(requestData.Email)
 	if err != nil {
@@ -240,7 +238,7 @@ func subscribeEmailToMailchimp(email string) error {
 		"status":        "subscribed", // Or "pending" if you want double opt-in
 	}
 
-	jsonPayload, err := json.Marshal(payload)
+	jsonPayload, err := json.Marshal(payload) // Convert to json
 	if err != nil {
 		return err
 	}
