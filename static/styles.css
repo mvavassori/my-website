@@ -52,14 +52,19 @@ img {
   height: auto;
 }
 
+header a {
+  color: white;
+  text-decoration: none;
+}
+
 header h1 {
   margin-left: 20px;
   font-size: 20px;
 }
 
-header a {
-  color: white;
-  text-decoration: none;
+header h1:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
 }
 
 /* Navigation Styles */
