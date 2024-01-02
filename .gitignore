@@ -22,3 +22,5 @@ go.work
 
 # Binary file
 my-website
+
+.env
