@@ -8,51 +8,42 @@
   </head>
   <body>
     <header>
-      <h1><a href="/">Name Surname</a></h1>
+      <h1><a href="/">Marco Vavassori</a></h1>
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
       <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
       <nav>
         <ul>
           <li><a href="/about">About</a></li>
-          <li><a href="https://twitter.com/x" target="_blank">Twitter</a></li>
           <li>
-            <a href="https://github.com/github" target="_blank">GitHub</a>
+            <a href="https://twitter.com/mvavassori_x" target="_blank"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/mvavassori" target="_blank">GitHub</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="container about">
-      <h2>About Me</h2>
-      <p>
-        Hello! I'm [Your Name], an individual with a passion for [mention your
-        interests or expertise]. I believe that [share your philosophy or
-        belief].
-      </p>
-
-      <h3>My Journey</h3>
-      <p>
-        My journey in [mention your industry or field] started when I [share how
-        your journey began]. Over the years, I've gained valuable experience and
-        knowledge in [mention your areas of expertise].
-      </p>
-
-      <h3>What I Do</h3>
-      <p>
-        I specialize in [describe your expertise or services]. My goal is to
-        [mention your mission or objectives], delivering [benefits or solutions]
-        to my clients and collaborators.
-      </p>
-
-      <h3>My Interests</h3>
-      <p>
-        Beyond my work, I have a deep passion for [mention your interests or
-        hobbies]. Exploring different [related areas] provides me with fresh
-        perspectives that often inspire my projects. In my free time, you can
-        often find me [mention hobbies or activities].
-      </p>
+      <p>I'm a software developer from Italy</p>
     </main>
     <footer>
-      <p>&copy; 2023 Name Surname</p>
+      <div class="subscribe">
+        <p>Get notified...</p>
+        <p>When I release a new product or publish something important.</p>
+        <form id="subscribe-form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
     </footer>
+    <script src="../static/scripts/subscribe.js"></script>
   </body>
 </html>
