@@ -29,11 +29,11 @@
       <h1>Latest Posts</h1>
       <hr />
       {{range .}}
-      <article>
+      <div class="post">
         <h2><a href="/posts/{{.Filename}}">{{.Title}}</a></h2>
         <p class="date">{{.Date}}</p>
         <p>{{.Excerpt}}</p>
-      </article>
+      </div>
       {{else}}
       <p>No posts found.</p>
       {{end}}

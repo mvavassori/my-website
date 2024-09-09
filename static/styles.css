@@ -2,7 +2,7 @@
 html body {
   margin: 0;
   font-family: arial, sans-serif;
-  font-size: 19px;
+  font-size: 16px;
   height: 100%;
 }
 
@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
 header {
@@ -21,30 +22,34 @@ header {
   align-items: center;
 }
 
-article {
+.post {
   margin: 4px;
   padding: 4px 16px;
   border-radius: 10px;
-  background-color: rgb(240, 240, 240);
+  background-color: #eaeaea;
 }
 
 .container {
-  width: 70%;
-  max-width: 1200px;
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  flex: 1;
-}
-
-.post {
   width: 60%;
   max-width: 1200px;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   flex: 1;
-  font-size: x-large;
+}
+
+article {
+  width: 60%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex: 1;
+  font-size: large;
+}
+
+article h1 {
+  font-size: xx-large;
 }
 
 img {
@@ -102,18 +107,18 @@ header nav ul li a:hover {
   z-index: 2;
 }
 
-/* Article styling */
-main article h2 a {
+/* Latest Posts styling */
+.post h2 a {
   text-decoration: none;
   color: black;
 }
 
-main article h2 a:hover {
+.post h2 a:hover {
   text-decoration: underline;
 }
 
 .date {
-  color: rgb(104, 104, 104);
+  color: #686868;
   font-size: 12px;
 }
 
@@ -153,7 +158,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .subscribe form input {
@@ -165,15 +170,16 @@ footer {
 
 .subscribe form button {
   padding: 10px 20px;
-  background-color: #008702;
+  background-color: #00bd06;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .subscribe form button:hover {
-  background-color: #007402;
+  background-color: #00ae06;
 }
 
 /* Mobile styles */
@@ -186,7 +192,7 @@ footer {
     width: 97%;
   }
 
-  .post {
+  article {
     width: 97%;
   }
 
@@ -234,11 +240,11 @@ footer {
     background-color: rgb(24, 26, 27);
     color: rgb(232, 230, 227);
   }
-  article {
+  .post {
     background-color: rgb(32, 35, 37);
     /* color: rgb(232, 230, 227); */
   }
-  main article h2 a {
+  .post h2 a {
     text-decoration: none;
     color: rgb(232, 230, 227);
   }
