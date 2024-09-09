@@ -82,8 +82,8 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {
-	// Extract post name from url. It's a slice: will give you the part of the path after "/posts/"
-	postSlug := r.URL.Path[len("/posts/"):]
+	// Extract path parameter using new go's syntax
+	postSlug := r.PathValue("slug")
 
 	// Append '.md' to get the actual filename
 	filename := postSlug + ".md"

@@ -26,7 +26,8 @@ func main() {
 		http.ServeFile(w, r, "./static/about.html")
 	})
 	http.HandleFunc("/", HomeHandler)
-	http.HandleFunc("/posts/", PostHandler)
+	// http.HandleFunc("/posts/", PostHandler)
+	http.HandleFunc("GET /posts/{slug}", PostHandler)
 	http.HandleFunc("/subscribe", SubscribeHandler)
 	fmt.Println("Starting server at port 8080")
 
