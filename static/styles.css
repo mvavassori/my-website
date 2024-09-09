@@ -2,7 +2,7 @@
 html body {
   margin: 0;
   font-family: arial, sans-serif;
-  font-size: 14px;
+  font-size: 19px;
   height: 100%;
 }
 
@@ -38,13 +38,13 @@ article {
 }
 
 .post {
-  width: 65%;
+  width: 60%;
   max-width: 1200px;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   flex: 1;
-  font-size: large;
+  font-size: x-large;
 }
 
 img {
@@ -82,7 +82,6 @@ header nav ul li a {
   transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
-/* Hover effect */
 header nav ul li a:hover {
   color: #f0f0f0;
   text-decoration: underline;
@@ -109,7 +108,6 @@ main article h2 a {
   color: black;
 }
 
-/* Hover effect */
 main article h2 a:hover {
   text-decoration: underline;
 }
@@ -132,21 +130,17 @@ footer {
   margin-top: auto;
 }
 
-/* footer p {
-  margin-left: 20px;
-} */
-
 .subscribe {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh; /* adjust this to your needs */
+  height: 20vh;
   text-align: center;
 }
 
 .subscribe p:first-child {
-  font-size: 1.5em; /* adjust this to your needs */
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0;
 }
