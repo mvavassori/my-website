@@ -24,3 +24,5 @@ go.work
 my-website
 
 .env
+
+tmp/
