@@ -52,6 +52,10 @@ article h1 {
   font-size: xx-large;
 }
 
+article a {
+  color: rgb(46, 112, 255);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -272,5 +276,9 @@ footer {
   }
   .date {
     color: rgb(166, 159, 147);
+  }
+
+  article a {
+    color: #749aff;
   }
 }
