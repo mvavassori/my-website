@@ -131,7 +131,7 @@ header nav ul li a:hover {
 footer {
   background-color: #333;
   color: white;
-  padding: 10px 0;
+  padding: 20px 0;
   margin-top: auto;
 }
 
@@ -140,28 +140,31 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh;
   text-align: center;
+  padding: 0 20px;
 }
 
 .subscribe p:first-child {
   font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
 }
 
 .subscribe p:last-child {
   margin-top: 0;
+  margin-bottom: 1em;
 }
 
 .subscribe form {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 30px;
+  max-width: 600px;
+  margin-bottom: 20px;
 }
 
 .subscribe form input {
+  flex-grow: 1;
   margin-right: 10px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -176,6 +179,7 @@ footer {
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .subscribe form button:hover {
@@ -190,6 +194,10 @@ footer {
 
   .container {
     width: 97%;
+  }
+
+  .container h1 {
+    text-align: center;
   }
 
   article {
@@ -232,6 +240,20 @@ footer {
   /* When the checkbox is checked, slide in the menu */
   #menu-toggle:checked + .hamburger-icon + nav {
     right: 0; /* Bring the sidebar on screen */
+  }
+
+  .subscribe form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subscribe form input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .subscribe form button {
+    width: 100%;
   }
 }
 
