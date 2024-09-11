@@ -4,8 +4,6 @@ excerpt: "Nulla eos lorem lorem ipsum lobortis erat sit consequat sea consetetur
 date: "2023-12-31"
 ---
 
-# Lorem Ipsum Markdown Post
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo in lacus facilisis tempor. Fusce auctor vestibulum orci, sit amet vehicula metus viverra ut.
 
 ## Subtitle 1: Lists

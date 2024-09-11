@@ -2,7 +2,7 @@
 html body {
   margin: 0;
   font-family: arial, sans-serif;
-  font-size: 16px;
+  font-size: large;
   height: 100%;
 }
 
@@ -45,11 +45,11 @@ article {
   margin-top: 40px;
   margin-bottom: 40px;
   flex: 1;
-  font-size: large;
+  font-size: 1.2em;
 }
 
 article h1 {
-  font-size: xx-large;
+  font-size: 3em;
 }
 
 article a {
@@ -198,10 +198,6 @@ footer {
 
   .container {
     width: 97%;
-  }
-
-  .container h1 {
-    text-align: center;
   }
 
   article {

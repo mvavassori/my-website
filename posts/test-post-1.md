@@ -4,8 +4,6 @@ excerpt: "Sed lorem accusam rebum nam sea amet elitr. Sit ut accusam dolor stet 
 date: "2023-12-29"
 ---
 
-# Lorem Ipsum Markdown Post
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo in lacus facilisis tempor. Fusce auctor vestibulum orci, sit amet vehicula metus viverra ut.
 
 ## Subtitle 1: Lists
