@@ -37,6 +37,8 @@ You can create links and include code sections in Markdown:
 - [Golang's Website](https://go.dev/)
 - [GitHub Repository](https://github.com/mvavassori/go-mdblog)
 
+Here's an inline code snippet: `fmt.Println("Hello, World!")`
+
 Here's a code section:
 
 ```go

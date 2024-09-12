@@ -56,6 +56,19 @@ article a {
   color: rgb(46, 112, 255);
 }
 
+article code {
+  background-color: #eaeaea;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* multi-line code blocks */
+article pre {
+  background-color: #eaeaea;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
 img {
   max-width: 100%;
   height: auto;
