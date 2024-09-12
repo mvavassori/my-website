@@ -286,4 +286,12 @@ footer {
   article a {
     color: #749aff;
   }
+
+  article code {
+    background-color: #202325;
+  }
+
+  article pre {
+    background-color: #202325;
+  }
 }
