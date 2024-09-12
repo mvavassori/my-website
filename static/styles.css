@@ -2,7 +2,6 @@
 html body {
   margin: 0;
   font-family: arial, sans-serif;
-  font-size: large;
   height: 100%;
 }
 
@@ -36,6 +35,7 @@ header {
   margin-top: 40px;
   margin-bottom: 40px;
   flex: 1;
+  font-size: large;
 }
 
 article {
@@ -124,6 +124,7 @@ header nav ul li a:hover {
 .date {
   color: #686868;
   font-size: 12px;
+  margin-top: -10px;
 }
 
 /* About */
@@ -149,14 +150,9 @@ footer {
 }
 
 .subscribe p:first-child {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 0.5em;
-}
-
-.subscribe p:last-child {
-  margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: -0.5em;
 }
 
 .subscribe form {
