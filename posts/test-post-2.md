@@ -37,6 +37,8 @@ You can create links and include code sections in Markdown:
 - [Golang's Website](https://go.dev/)
 - [GitHub Repository](https://github.com/mvavassori/go-mdblog)
 
+This is a link [Golang's Website](https://go.dev/) and this is another goddamned link [GitHub Repository](https://github.com/mvavassori/go-mdblog)
+
 Here's a code section:
 
 ```go
