@@ -1,55 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{.Title}}</title>
-    <meta name="description" content="{{.Excerpt}}" />
-    <link rel="stylesheet" href="/static/styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
-  </head>
-  <body>
-    <header>
-      <h1><a href="/">Marco Vavassori</a></h1>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
-      <nav>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li>
-            <a href="https://twitter.com/mvavassori_x" target="_blank"
-              >Twitter</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/mvavassori" target="_blank">GitHub</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <h1>{{.Title}}</h1>
-        <p class="date">{{.Date}}</p>
-        {{.Content}}
-      </article>
-    </main>
-    <footer>
-      <div class="subscribe">
-        <p>Get notified...</p>
-        <p>When I release a new product or publish something important.</p>
-        <form id="subscribe-form">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </footer>
-    <script src="../static/scripts/subscribe.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{.Title}}</title>
+        <meta name="description" content="{{.Excerpt}}" />
+        <link rel="stylesheet" href="/static/styles.css" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="/static/favicon.ico"
+        />
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">Marco Vavassori</a></h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+            <nav>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@Marco-Vavassori"
+                            target="_blank"
+                            >YouTube</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://twitter.com/mvavassori_x"
+                            target="_blank"
+                            >Twitter</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/mvavassori" target="_blank"
+                            >GitHub</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h1>{{.Title}}</h1>
+                <p class="date">{{.Date}}</p>
+                {{.Content}}
+            </article>
+        </main>
+        <footer>
+            <div class="subscribe">
+                <p>Get notified...</p>
+                <p>
+                    When I release a new product or publish something important.
+                </p>
+                <form id="subscribe-form">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+        <script src="../static/scripts/subscribe.js"></script>
+    </body>
 </html>
