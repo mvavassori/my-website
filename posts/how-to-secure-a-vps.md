@@ -1,6 +1,6 @@
 ---
 title: "How to secure a Linux Server"
-excerpt: "In this guide, you'll learn how to rent and configure your server with essential security measures. From ssh hardening to firefall ingress rules."
+excerpt: "In this guide, you'll learn how to rent and configure your server with essential security measures. From ssh hardening to firewall ingress rules."
 date: "2025-04-14"
 ---
 
