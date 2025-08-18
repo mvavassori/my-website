@@ -1,325 +1,325 @@
 /* General Styles */
 html,
 body {
-  margin: 0;
-  font-family: arial, sans-serif;
-  height: 100%;
+    margin: 0;
+    font-family: arial, sans-serif;
+    height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fdf6e3;
 }
 
 /* Header Styles */
 header {
-  background-color: #333;
-  color: white;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: #1a1a18;
+    color: white;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 header h1 {
-  margin-left: 20px;
-  font-size: 20px;
+    margin-left: 20px;
+    font-size: 20px;
 }
 
 header h1:hover {
-  color: #f0f0f0;
-  text-decoration: underline;
+    color: #f0f0f0;
+    text-decoration: underline;
 }
 
 /* Navigation Styles */
 header nav ul {
-  list-style: none;
-  display: flex;
-  margin-right: 20px;
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
 }
 
 header nav ul li {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
 header nav ul li a {
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 header nav ul li a:hover {
-  color: #f0f0f0;
-  text-decoration: underline;
+    color: #f0f0f0;
+    text-decoration: underline;
 }
 
 /* Hamburger Menu Styles */
 #menu-toggle {
-  display: none;
+    display: none;
 }
 
 .hamburger-icon {
-  display: none;
-  font-size: 20px;
-  cursor: pointer;
-  top: 10px;
-  right: 20px;
-  z-index: 2;
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    top: 10px;
+    right: 20px;
+    z-index: 2;
 }
 
 /* Main Content Styles */
 .container,
 article {
-  width: 60%;
-  max-width: 1200px;
-  margin: 40px auto;
-  flex: 1;
+    width: 60%;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex: 1;
 }
 
 .container {
-  font-size: large;
+    font-size: large;
 }
 
 article {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 article h1 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 article a {
-  color: rgb(46, 112, 255);
+    color: rgb(46, 112, 255);
 }
 
 article ul,
 article ol {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 article li {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 article li:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 article li > ul,
 article li > ol {
-  margin-top: 12px;
-  margin-bottom: 0;
+    margin-top: 12px;
+    margin-bottom: 0;
 }
 
 article li a {
-  padding: 2px 0;
-  line-height: 1.5;
-  display: inline-block;
+    padding: 2px 0;
+    line-height: 1.5;
+    display: inline-block;
 }
 
 /* Code Styles */
 article code {
-  background-color: #eaeaea;
-  padding: 2px 4px;
-  border-radius: 4px;
+    background-color: #eaeaea;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
 article pre {
-  background-color: #eaeaea;
-  padding: 12px 16px;
-  border-radius: 4px;
-  overflow-x: auto;
+    background-color: #eaeaea;
+    padding: 12px 16px;
+    border-radius: 4px;
+    overflow-x: auto;
 }
 
 article pre code {
-  padding: 0;
-  background-color: transparent;
+    padding: 0;
+    background-color: transparent;
 }
 
 /* Image Styles */
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Post Styles */
 .post {
-  margin: 4px;
-  padding: 4px 16px;
-  border-radius: 10px;
-  background-color: #eaeaea;
+    margin: 4px;
+    padding: 4px 16px;
+    border-radius: 10px;
+    background-color: #ede6d5;
 }
 
 .post h2 a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .post h2 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .date {
-  color: #686868;
-  font-size: 12px;
-  margin-top: -10px;
+    color: #686868;
+    font-size: 12px;
+    margin-top: -10px;
 }
 
 /* About Page Styles */
 .about {
-  font-size: large;
+    font-size: large;
 }
 
 /* Footer Styles */
 footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  margin-top: auto;
+    background-color: #1a1a18;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 /* Subscribe Form Styles */
 .subscribe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .subscribe p:first-child {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: -0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: -0.5em;
 }
 
 .subscribe form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 600px;
-  margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 20px;
 }
 
 .subscribe form input {
-  flex-grow: 1;
-  margin-right: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .subscribe form button {
-  padding: 10px 20px;
-  background-color: #007f00;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  white-space: nowrap;
+    padding: 10px 20px;
+    background-color: #007f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .subscribe form button:hover {
-  background-color: #006600;
+    background-color: #006600;
 }
 
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
-  header {
-    position: relative;
-  }
+    header {
+        position: relative;
+    }
 
-  .container,
-  article {
-    width: 97%;
-  }
+    .container,
+    article {
+        width: 97%;
+    }
 
-  .menu-toggle {
-    display: none;
-  }
+    .menu-toggle {
+        display: none;
+    }
 
-  header h1 {
-    margin-left: 10px;
-  }
+    header h1 {
+        margin-left: 10px;
+    }
 
-  .hamburger-icon {
-    display: block;
-    margin-right: 10px;
-  }
+    .hamburger-icon {
+        display: block;
+        margin-right: 10px;
+    }
 
-  header nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100%;
-    width: 60%;
-    background-color: #333;
-    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease;
-    z-index: 1;
-  }
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 60%;
+        background-color: #1a1a18;
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+        z-index: 1;
+    }
 
-  header nav ul {
-    display: block;
-    padding-top: 60px;
-  }
+    header nav ul {
+        display: block;
+        padding-top: 60px;
+    }
 
-  header nav ul li {
-    text-align: right;
-    padding: 20px 0px 0px 0px;
-  }
+    header nav ul li {
+        text-align: right;
+        padding: 20px 0px 0px 0px;
+    }
 
-  #menu-toggle:checked + .hamburger-icon + nav {
-    right: 0;
-  }
+    #menu-toggle:checked + .hamburger-icon + nav {
+        right: 0;
+    }
 
-  .subscribe form {
-    flex-direction: column;
-    align-items: stretch;
-  }
+    .subscribe form {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-  .subscribe form input {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
+    .subscribe form input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 
-  .subscribe form button {
-    width: 100%;
-  }
+    .subscribe form button {
+        width: 100%;
+    }
 }
 
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(24, 26, 27);
-    color: rgb(232, 230, 227);
-  }
+    body {
+        background-color: #262624;
+        color: rgb(232, 230, 227);
+    }
 
-  .post {
-    background-color: rgb(32, 35, 37);
-  }
+    .post {
+        background-color: #1a1a18;
+    }
 
-  .post h2 a {
-    color: rgb(232, 230, 227);
-  }
+    .post h2 a {
+        color: rgb(232, 230, 227);
+    }
 
-  .date {
-    color: rgb(166, 159, 147);
-  }
+    .date {
+        color: rgb(166, 159, 147);
+    }
 
-  article a {
-    color: #749aff;
-  }
+    article a {
+        color: #749aff;
+    }
 
-  article code,
-  article pre {
-    background-color: #202325;
-  }
+    article code,
+    article pre {
+        background-color: #202325;
+    }
 }
