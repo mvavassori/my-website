@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #fdf6e3;
+    background-color: #faf9f5;
 }
 
 /* Header Styles */
@@ -50,7 +50,9 @@ header nav ul li {
 }
 
 header nav ul li a {
-    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+    transition:
+        color 0.3s ease-in-out,
+        text-decoration 0.3s ease-in-out;
 }
 
 header nav ul li a:hover {
@@ -153,7 +155,7 @@ img {
     margin: 4px;
     padding: 4px 16px;
     border-radius: 10px;
-    background-color: #ede6d5;
+    background-color: #f0eee6;
 }
 
 .post h2 a {
