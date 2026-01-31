@@ -233,6 +233,12 @@ footer {
     background-color: #006600;
 }
 
+.public-key {
+    white-space: pre-wrap; /* Mantiene i ritorni a capo ma permette il wrap */
+    word-break: break-all; /*Forza la rottura della stringa infinita*/
+    overflow-wrap: break-word; /*Supporto aggiuntivo per browser moderni */
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 600px) {
     header {
